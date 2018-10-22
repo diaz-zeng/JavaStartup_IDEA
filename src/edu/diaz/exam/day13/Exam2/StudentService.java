@@ -6,46 +6,39 @@ import java.util.ListIterator;
 public class StudentService {
     private static StudentService instance;
     private ArrayList<Student> students;
-    public static synchronized StudentService getInstance()
-    {
-        if(null==instance)
-        {
+
+    public static synchronized StudentService getInstance() {
+        if (null == instance) {
             instance = new StudentService();
             return instance;
-        }
-        else
-        {
+        } else {
             return instance;
         }
     }
-    private StudentService()
-    {
-        students  = new ArrayList<Student>();
+
+    private StudentService() {
+        students = new ArrayList<Student>();
     }
-    public boolean add(Student student)
-    {
-        if(!isExists(student))
-        {
+
+    public boolean add(Student student) {
+        if (!isExists(student)) {
             students.add(student);
             return true;
-        }
-        else
-        {
+        } else {
             return false;
         }
     }
-    private boolean isExists(Student student)
-    {
-        for (Student temp:students) {
-            if(temp.equals(student))
-            {
+
+    private boolean isExists(Student student) {
+        for (Student temp : students) {
+            if (temp.equals(student)) {
                 return true;
             }
         }
         return false;
     }
-    public Student get(String id)
-    {
+
+    public Student get(String id) {
 //        for (Student student:students) {
 //            if(id.equals(student.getID()))
 //            {
