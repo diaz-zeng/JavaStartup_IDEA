@@ -1,4 +1,4 @@
-package edu.diaz.exam.day14.exma1;
+package edu.diaz.exam.day14.exam1;
 
 public class BookInfo {
     private String title,isbn;

@@ -1,6 +1,5 @@
-package edu.diaz.exam.day14.exma1;
+package edu.diaz.exam.day14.exam1;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -121,6 +120,7 @@ public class Main {
     {
         Collection<BookInfo> books = service.getAllBookInfo();
         Iterator<BookInfo> iterator = books.iterator();
+        System.out.println("共有图书："+books.size());
         while (iterator.hasNext())
         {
             System.out.println(iterator.next());
